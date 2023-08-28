@@ -17,7 +17,7 @@ const router = express.Router();
 //router.post('/', checkAuth, nuevoProyecto);
 
 router
-    .Router('/')
+    .route('/')
     .get(checkAuth, obtenerProyectos)
     .post(checkAuth, nuevoProyecto);
 
