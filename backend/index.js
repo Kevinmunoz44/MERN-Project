@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectarDB from './config/db.js';
 import usuarioRoutes from './routes/usuarioRoutes.js';
 import proyectoRoutes from './routes/proyectoRoutes.js';
+import tareaRoutes from './routes/tareaRoutes.js';
 
 const app = express();
 app.use(express.json());
@@ -13,6 +14,7 @@ dotenv.config();
 //Routing
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/proyectos', proyectoRoutes);
+app.use('/api/tareas', tareaRoutes);
 
 connectarDB();
 
